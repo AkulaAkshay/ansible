@@ -53,3 +53,55 @@
         </Skills>
     </Student>
 </Students>P
+
+#-------
+<students>
+    <student1>
+        <name>akshay</name>
+        <DOB>13-00-2000</DOB>
+        <age>20</age>
+        <addresses>
+            <address>
+                <type of address>permanent</type of address>
+                <doorno>20-2-2323</doorno>
+                <street>habsiguda</street>
+                <pin>509001</pin>
+            </address>
+            <address>
+                <type of address>current</type of address>
+                <doorno>20-0-221</doorno>
+                <street>girmajipet</street>
+                <pincode>67776</pincode>
+            </address>
+        </addresses>
+        <skills>
+            <skill>java</skill>
+            <skill>python</skill>
+            <skill>ML</skill>
+        </skills>
+    </student1>
+    <student2>
+        <name>sun</name>
+        <DOB>23-00-2000</DOB>
+        <age>40</age>
+        <addresses>
+            <address>
+                <type of address>permanent</type of address>
+                <doorno>20-2-2003</doorno>
+                <street>hdasa</street>
+                <pin>56561</pin>
+            </address>
+            <address>
+                <type of address>current</type of address>
+                <doorno>04-1-221</doorno>
+                <street>sirmajipet</street>
+                <pincode>6556</pincode>
+            </address>
+        </addresses>
+        <skills>
+            <skill>devops</skill>
+            <skill>linux</skill>
+            <skill>ML</skill>
+        </skills>
+    </student2>
+</students>

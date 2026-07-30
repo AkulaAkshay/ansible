@@ -1,5 +1,5 @@
 - name: ping the server
-  host: frontend #which server you are connecting to
+  host: mongodb #which server you are connecting to
   # list of task/collection/modules
   tasks:
   - name: ping

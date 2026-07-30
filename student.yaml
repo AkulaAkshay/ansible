@@ -39,4 +39,33 @@
   - java
   - devops
   - cloud
-  
+
+  #----------------
+
+
+- name: akshay
+  dob: "12-3-1888"
+  age: 22
+  addresses:
+  - type: permanent
+    doorno: 2-90
+    street: balnagar
+    pincode: 30090
+  - type: current
+    doorno: 2-88
+    street: bangalama
+    pincode: 409009
+    collage:
+    - type: 10
+      name: ssc
+      gpa:  9.0
+      friends:
+      - ramesh
+      - suresh
+      - krish
+    - type: 12
+      name: cbse
+      gpa: 7.7
+      friends:
+      - rahul
+      - sammy

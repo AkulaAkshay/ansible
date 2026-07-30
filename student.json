@@ -23,3 +23,64 @@
         "cloud"
     ]
 }
+#-------
+
+
+"student": {
+    "name": "akshay"
+    "dob": "10-11-2121"
+    "age": 11
+    "education":[
+        {
+            "class": "tenth"
+            "gpa": 10
+            "school": "santa maria high school"
+            "friends": ["arun", "suresh"]
+        }
+        {
+            "class": "inter"
+            "gpa": 8
+            "school": "sant anna's high school"
+            "friends": ["aakash", "ramesh"]
+        }
+        {
+            "class": "btech"
+            "gpa": 7.9
+            "school": "sr university"
+            "friends": ["aman", "santoosh"]
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+"student": {
+    "name": "akshay"
+    "dob": "10-11-2121"
+    "age": 11
+    "education":[
+        {
+            "class": "tenth"
+            "gpa": 10
+            "school": "santa maria high school"
+            "friends": ["arun", "suresh"]
+        }
+        {
+            "class": "inter"
+            "gpa": 8
+            "school": "sant anna's high school"
+            "friends": ["aakash", "ramesh"]
+        }
+        {
+            "class": "btech"
+            "gpa": 7.9
+            "school": "sr university"
+            "friends": ["aman", "santoosh"]
+        }
+    ]
+}
