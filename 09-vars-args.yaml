@@ -1,0 +1,9 @@
+#passing the variables from the argument list to the playbook. This is useful when we want to pass the variables from the command line to the playbook. We can use this method to pass the variables from the command line and use it in our playbook.
+
+- name: variables from a file
+  hosts: local
+  connection: local
+  tasks:
+  - name: Display course details
+    ansible.builtin.debug:
+      msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"

@@ -3,7 +3,5 @@
   connection: local
   tasks:
   - name: Display course details
-    vars:
-      trainer: "Shiva K"
     ansible.builtin.debug:
       msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
