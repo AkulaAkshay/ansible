@@ -1,0 +1,11 @@
+#we will keep the variables in a course.yaml file and include it in the 06-vars-files.yaml file.
+
+- name: variables from a file
+  hosts: localhost
+  connection: local
+  vars_files:
+    - course.yaml
+  tasks:
+  - name: Display course details
+    ansible.builtin.debug:
+      msg: "Course: {{ course }}, Duration: {{ duration }}, Trainer: {{ trainer }}"
