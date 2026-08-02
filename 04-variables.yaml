@@ -8,7 +8,7 @@
   tasks:
   - name: Display course details
     vars:
-      course: "Ansible for Beginners"
+      course: "Ansible for Beginners" #inherited variable from play level will be overridden by task level variable. task level variable has higher precedence than play level variable.
     ansible.builtin.debug:
       msg: "Course: {{ course }}, Duration: {{ duration }}, Trainer: {{ trainer }}"
 
