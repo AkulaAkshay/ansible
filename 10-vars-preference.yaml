@@ -16,4 +16,13 @@
       NAME: "vars at task level"
     ansible.builtin.debug:
       msg: "Name: {{ NAME }}"
-  
+
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "NAME=vars_at_args" 10-vars-preference.yaml --> if we pass the variable from the command line, it will have the highest precedence and will override all other variables.
+
+#preference order of variables in ansible:
+# 1. Variables passed on the command line with -e or -extra-vars --> highest precedence and will override all other variables.
+# 2. Variables defined in the vars at play level
+# 3. Variables defined in the vars_files
+# 4. Variables defined in the vars_prompt
+# 5. Variables defined in the vars at task level
+# 6. Variables defined in the inventory file --> it is as defaults and has the lowest precedence.
