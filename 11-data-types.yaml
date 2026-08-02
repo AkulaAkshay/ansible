@@ -1,0 +1,19 @@
+- name: data types in ansible
+  hosts: local
+  connection: local
+  vars:
+    course: "DEVOPS with AWS" #string
+    duration: 6 #integer
+    is_live: true #boolean
+    tools: #["Ansible", "Terraform", "Docker", "Kubernetes"] --> list
+    - ansible
+    - tf
+    - docker
+    - k8s
+    concepts: #map/dictionary
+      cloud: "AWS"
+      config_mgmt: "Ansible"
+  tasks:
+  - name: print course details
+    ansible.builtin.debug:
+      msg: "Course: {{ course }}, Duration: {{ duration }}, Is Live: {{ is_live }}, Tools: {{ tools }}, Concepts: {{ concepts }}"
