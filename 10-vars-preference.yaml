@@ -1,0 +1,19 @@
+- name: vars preference order
+  hosts: local
+  connection: local
+  # vars defined at the play level
+  vars:
+    NAME: "vars at play level"
+  vars_files:
+    - course.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: "Enter your name"
+    private: false
+  tasks:
+  - name: testing variable preference order
+    vars:
+      NAME: "vars at task level"
+    ansible.builtin.debug:
+      msg: "Name: {{ NAME }}"
+  
