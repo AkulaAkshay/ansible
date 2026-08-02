@@ -7,9 +7,7 @@
     trainer: "Shiva Kumar"
   tasks:
   - name: Display course details
-    # vars:
-    #   course: "Ansible for Beginners"
+    vars:
+      course: "Ansible for Beginners"
     ansible.builtin.debug:
       msg: "Course: {{ course }}, Duration: {{ duration }}, Trainer: {{ trainer }}"
-
-    
