@@ -11,3 +11,6 @@
       course: "Ansible for Beginners"
     ansible.builtin.debug:
       msg: "Course: {{ course }}, Duration: {{ duration }}, Trainer: {{ trainer }}"
+
+#this is main file, we generally don't prefer the varaibles to be defined in the main file, we can define the variables in a separate file and include it in the main file. This is a good practice to keep the code clean and organized and less prone to errors.
+#we will keep the variables in a course.yaml file and include it in the 06-vars-files.yaml file.

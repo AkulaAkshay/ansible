@@ -1,0 +1,16 @@
+#taking variabes from the user using prompt module. This is useful when we want to take input from the user at runtime. We can use this module to take input from the user and use it in our playbook.
+
+- name: variables from prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: username
+    prompt: "Enter your username"
+    private: false
+  - name: age
+    prompt: "Enter your age"
+    private: false
+  - task: 
+    - name: Display username
+      ansible.builtin.debug:
+        msg: "Hello, username: {{ username }} and your age is {{ age }}!"
