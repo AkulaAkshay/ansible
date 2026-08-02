@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    course: "Ansible for beginners"
+    course: "Ansible for Beginners"
     duration: "2 days"
     trainer: "Shiva Kumar"
   tasks:
