@@ -20,7 +20,7 @@
 #ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "NAME=vars_at_args" 10-vars-preference.yaml --> if we pass the variable from the command line, it will have the highest precedence and will override all other variables.
 
 #preference order of variables in ansible:
-# 1. Variables passed on the command line with -e or -extra-vars --> highest precedence and will override all other variables.
+# 1. Variables passed on the command line with -e or -extra-vars --> highest precedence and will override all other variables. --> for any programming or scripting language, the command line arguments have the highest precedence and will override all other variables. This is because the command line arguments are passed at runtime and are not part of the code or script. Hence, they have the highest precedence and will override all other variables.
 # 2. Variables defined in the vars at play level
 # 3. Variables defined in the vars_files
 # 4. Variables defined in the vars_prompt
