@@ -1,12 +1,12 @@
 - name: Play level variables ..
-  hosts: localhost
+  hosts: local
   connection: local
   vars:
     course: "DEVOPS with AWS"
     duration: "2 days"
     trainer: "Shiva Kumar"
   tasks:
-  - name: Display course details
+  - name: Display course details #inherited variable from play level will be overridden by task level variable. task level variable has higher precedence than play level variable.
     vars:
       course: "Ansible for Beginners"
     ansible.builtin.debug:
