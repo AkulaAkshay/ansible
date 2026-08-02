@@ -5,10 +5,10 @@
   connection: local
   vars_prompt:
   - name: username
-    prompt: "Enter your username"
+    prompt: Enter your username
     private: false
   - name: age
-    prompt: "Enter your age"
+    prompt: Enter your age
     private: false
   - task: 
     - name: Display username
