@@ -1,0 +1,8 @@
+- name: facts gathering #which ansible collects from the target hosts. These facts are stored in variables that can be used in playbooks and templates.
+  hosts: local
+  connection: local
+  tasks:
+  - name: Display ansible facts
+    ansible.builtin.debug:
+      var: ansible_facts
+      msg: "{{ ansible_facts }}"
