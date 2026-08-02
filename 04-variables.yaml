@@ -2,9 +2,9 @@
   hosts: localhost
   connection: local
   vars:
-    course: "ansible for beginners"
+    course: "Ansible for beginners"
     duration: "2 days"
-    trainer: "shiva kumar"
+    trainer: "Shiva Kumar"
   tasks:
   - name: Display course details
     ansible.builtin.debug:
