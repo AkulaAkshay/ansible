@@ -7,7 +7,7 @@
     ansible.builtin.dnf:
       name: nginx
       state: latest
-    when: ansible_os_famil== "RedHat" #if we want to use anything from ansible facts we should keep "ansible_*" . example: "pkg_mgr": "dnf" --> ansible_pkg_mgr
+    when: ansible_os_family== "RedHat" #if we want to use anything from ansible facts we should keep "ansible_*" . example: "pkg_mgr": "dnf" --> ansible_pkg_mgr
 
   - name: install nginx if DEBIAN
     ansible.builtin.apt:
