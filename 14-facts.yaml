@@ -16,3 +16,7 @@
     when: ansible_os_family== "Debian"
 
 #ansible will write this for us by default in the background (in some situatuins where ansible can't do this , we can explicitly extract the data and mention as above)-> heterogeneous -> this is the drawbag in the shell that ansible is solving
+#we can control the playbook by extracting the data from the target server (by extracting the target server os we can control the playbook, not only os any thing we can extract from the target server and control the ansible playbook)
+#we can  write a playbook and  based on the facts (target server facts/info/variables) we can execute the playbook against multiple flavours i.e., multiple distributions
+
+#No inventory concept in shell, if we have 50 servers we should manually connect to all the servers but with inventory we can connect to all the servers at a time itself --> parallel run. --> this is the point shell can't handle many servers but ansible can handle any no.of servers.
