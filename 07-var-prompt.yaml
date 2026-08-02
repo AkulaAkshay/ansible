@@ -7,10 +7,7 @@
   - name: username
     prompt: Enter your username
     private: false
-  - name: age
-    prompt: Enter your age
-    private: false
-  - task: 
-    - name: Display username
-      ansible.builtin.debug:
-        msg: "Hello, username: {{ username }} and your age is {{ age }}!"
+  - tasks: 
+  - name: Display username
+    ansible.builtin.debug:
+      msg: "Hello, username: {{ username }} !"
