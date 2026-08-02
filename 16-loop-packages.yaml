@@ -7,8 +7,6 @@
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
-      ansible.builtin.debug:
-        msg: "{{ item }} installation completed"
     loop:
     - zip
     - nginx
