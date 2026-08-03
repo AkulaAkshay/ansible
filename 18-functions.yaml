@@ -43,4 +43,4 @@
   tasks:
   - name: converting map to items
     ansible.builtin.debug:
-      msg: "List of tags i.e., ListTags are: {{ ListTags | items2map }} "
+      msg: "List of tags i.e., ListTags are: {{ ListTags | items2dict }} "
