@@ -1,0 +1,13 @@
+#in ansible we generally use filters/functions to execute our task -- when we dont have an ready made functions instead of creating an function in ansible (should be created in python because ansible is written in python code) we generally use command or shell
+
+#command vs shell module
+#command --> if we are executing a simple command --> a simple command which dosen't need access to shell environment like varibles, piping, redirection, bash, etc..,
+#shell --> 
+
+- name: grep for root
+  ansible.builtin.command: cat /etc/passwd | grep root #--> this command's output we need to take into a variable. [ in shell we have VAR_NAME=$(command)] here we have something called register (to execute a command and to take that variable --> we use register), in the ansible.builtin.set_facts --> we should define the variables dynamically
+  register: command_output #(the command --> cat /etc/passwd | grep root --> this output will be stored in the command_output variable)
+
+- name: print the command_output 
+  ansible.builtin.debug:
+    msg: "the command's output is: {{ command_output }}"
