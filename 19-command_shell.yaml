@@ -9,7 +9,7 @@
   connection: local
   tasks:
     - name: grep for root
-      #ansible.builtin.command: cat /etc/passwd | grep root # this throws an error because command can execute only small tasks (like ls -l, ...)
+      #ansible.builtin.command: cat /etc/passwd | grep root # --> this throws an error because command can execute only small tasks (like ls -l, ...)
       #--> this command's output we need to take into a variable. [ in shell we have VAR_NAME=$(command)] here we have something called register (to execute a command and to take that variable --> we use register), in the ansible.builtin.set_facts --> we should define the variables dynamically
       ansible.builtin.shell: cat /etc/passwd | grep root
       register: command_output #(the command --> cat /etc/passwd | grep root --> this output will be stored in the command_output variable)
@@ -17,3 +17,15 @@
     - name: print the command_output 
       ansible.builtin.debug:
        msg: "{{ command_output }}"
+#---------------------
+- name: command vs shell
+  hosts: local
+  connection: local
+  tasks:
+    - name: redirect the output of a command
+      ansible.builtin.command: ls -ltr >> /tmp/output.txt
+      register: redirect_output
+    - name: print the output
+      ansible.builtin.debug:
+        msg: "{{ redirect_output }}"
+
