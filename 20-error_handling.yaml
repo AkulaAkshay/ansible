@@ -3,7 +3,7 @@
 # id roboshop --> if user dosen't exists only then we get an error --> in this case we need to handle this error
 # some errors we need to handle and some errors we can't handle
 
-- name: command vs shell
+- name: error handling
   hosts: local
   connection: local
   tasks:
@@ -14,3 +14,20 @@
     - name: print the output
       ansible.builtin.debug:
         msg: "{{ redirect_output }}"
+#----------------------------------
+- name: error handling
+  hosts: local
+  connection: local
+  tasks:
+  - name: check whether user exixts or not
+    ansible.builtin.command: id roboshop
+    register: user_output
+    ignore_errors: ture
+    
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ user_output }}"
+
+  - name: create user
+    ansible.builtin.command:
+    when: user_output.rc != 0
