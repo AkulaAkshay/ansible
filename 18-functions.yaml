@@ -82,5 +82,15 @@
   tasks:
   - name: convert to lower case
     ansible.builtin.debug:
-      msg: "convert into lower case: {{ institute | upper }}"
+      msg: "convert into upper case: {{ institute | upper }}"
+#---------------------------
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    ip_address: 344.5440.5211.1012
+  tasks:
+  - name: check ip_address is valid or not
+    ansible.builtin.debug:
+      msg: "check ip_address is valid or not: {{ ip_address | ansible.utils.ipv4 }}"
 #---------------------------
