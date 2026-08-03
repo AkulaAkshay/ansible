@@ -1,3 +1,4 @@
+#mostly we use ansible builtin functions, if we want to create our customized functions then we need to write python code because ansible is written in python.
 - name: functions
   hosts: local
   connection: local
@@ -23,9 +24,23 @@
   connection: local
   vars:
     tags: #map or dictionary
-      application: payment
+      Application: Payment
       Environment: Dev
   tasks:
   - name: converting mao or dictionary into a list or items
     ansible.builtin.debug:
       msg: "tags are: {{ tags | dict2items }}"
+#---------------------------
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    ListTags:
+    - key: Application
+      value: Payment
+    - key: Environment
+      value: Dev
+  tasks:
+  - name: converting map to items
+    ansible.builtin.debug:
+      msg: "List of tags i.e., ListTags are: {{ ListTags | items2map }} "
