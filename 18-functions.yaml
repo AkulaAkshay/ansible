@@ -1,4 +1,5 @@
 #mostly we use ansible builtin functions, if we want to create our customized functions then we need to write python code because ansible is written in python.
+#filters or functions --> basically if we provide an input , function or filter will filter the input and provides the output.
 - name: functions
   hosts: local
   connection: local
@@ -27,9 +28,9 @@
       Application: Payment
       Environment: Dev
   tasks:
-  - name: converting mao or dictionary into a list or items
+  - name: converting mao or dictionary into a list or items 
     ansible.builtin.debug:
-      msg: "tags are: {{ tags | dict2items }}"
+      msg: "tags are: {{ tags | dict2items }}" #list or items --> []
 #---------------------------
 - name: functions
   hosts: local
@@ -43,4 +44,16 @@
   tasks:
   - name: converting map to items
     ansible.builtin.debug:
-      msg: "List of tags i.e., ListTags are: {{ ListTags | items2dict }} "
+      msg: "List of tags i.e., ListTags are: {{ ListTags | items2dict }} " #map or dictionary --> {}
+#----------------------------
+# till now we defined a variable at the start itself (in vars section) what if we want to define a variable in the middle i.e., (in the tasks section)
+- name: functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: read student.yaml file and taking that file into a variable student_yaml
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup( 'file', student.yaml' ) | from_yaml }}"
+  - name: convert yaml into json
+    ansible.builtin.debug:
+      msg: "into json format: {{ student_yaml | to_json }}"
