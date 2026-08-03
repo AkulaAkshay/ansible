@@ -1,3 +1,75 @@
+# - name: "sivakumar reddy m"
+#   dob: "01-01-01"
+#   age: 21
+#   addresses:
+#     # Object
+#   - doorNo: 4-32
+#     street: "gandhi nagar"
+#     city: hyderabd
+#     pin: 534565
+#     type: current
+  
+#   - doorNo: 4-32
+#     street: "gandhi nagar"
+#     city: hyderabd
+#     pin: 534565
+#     type: perm
+#   skills:
+#   - java
+#   - devops
+#   - cloud
+
+# - name: "ramesh"
+#   dob: "01-01-01"
+#   age: 21
+#   addresses:
+#     # Object
+#   - doorNo: 4-32
+#     street: "gandhi nagar"
+#     city: hyderabd
+#     pin: 534565
+#     type: current
+  
+#   - doorNo: 4-32
+#     street: "gandhi nagar"
+#     city: hyderabd
+#     pin: 534565
+#     type: perm
+#   skills:
+#   - java
+#   - devops
+#   - cloud
+
+#   #----------------
+
+
+# - name: akshay
+#   dob: "12-3-1888"
+#   age: 22
+#   addresses:
+#   - type: permanent
+#     doorno: 2-90
+#     street: balnagar
+#     pincode: 30090
+#   - type: current
+#     doorno: 2-88
+#     street: bangalama
+#     pincode: 409009
+#     collage:
+#     - type: 10
+#       name: ssc
+#       gpa:  9.0
+#       friends:
+#       - ramesh
+#       - suresh
+#       - krish
+#     - type: 12
+#       name: cbse
+#       gpa: 7.7
+#       friends:
+#       - rahul
+#       - sammy
+
 - name: "sivakumar reddy m"
   dob: "01-01-01"
   age: 21
@@ -39,33 +111,3 @@
   - java
   - devops
   - cloud
-
-  #----------------
-
-
-- name: akshay
-  dob: "12-3-1888"
-  age: 22
-  addresses:
-  - type: permanent
-    doorno: 2-90
-    street: balnagar
-    pincode: 30090
-  - type: current
-    doorno: 2-88
-    street: bangalama
-    pincode: 409009
-    collage:
-    - type: 10
-      name: ssc
-      gpa:  9.0
-      friends:
-      - ramesh
-      - suresh
-      - krish
-    - type: 12
-      name: cbse
-      gpa: 7.7
-      friends:
-      - rahul
-      - sammy
