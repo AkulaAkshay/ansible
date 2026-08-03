@@ -23,7 +23,8 @@
   connection: local
   tasks:
     - name: redirect the output of a command
-      ansible.builtin.command: ls -ltr >> /tmp/output.txt
+      #ansible.builtin.command: ls -ltr >> /tmp/output.txt --> throws an error
+      ansible.builtin.shell: ls -ltr >> /tmp/output.txt
       register: redirect_output
     - name: print the output
       ansible.builtin.debug:
