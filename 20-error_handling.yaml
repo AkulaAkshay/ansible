@@ -1,0 +1,16 @@
+#errors are 2 types --> 1. we can handle 2. we can't handle
+#creating a user but already exists --> here we will get an error --> we should handle this error
+# id roboshop --> if user dosen't exists only then we get an error --> in this case we need to handle this error
+# some errors we need to handle and some errors we can't handle
+
+- name: command vs shell
+  hosts: local
+  connection: local
+  tasks:
+    - name: redirect the output of a command
+      ansible.builtin.command: ls -ltr >> /tmp/output.txt #--> throws an error (usually by defult when we get an error shell scripting will proceed further but ansible will stop at the error, will not proceed further this is general behaviour everywhere --> but if we want to handlle errors then we need to keep ignore_errors: true --> if we use this even if we get error it will pproceed further)
+      register: redirect_output
+      ignore_errors: true
+    - name: print the output
+      ansible.builtin.debug:
+        msg: "{{ redirect_output }}"
