@@ -88,7 +88,7 @@
   hosts: local
   connection: local
   vars:
-    ip_address: 344.5440.5211.1012
+    ip_address: 182.176.2.1
   tasks:
   - name: check ip_address is valid or not
     ansible.builtin.debug:
