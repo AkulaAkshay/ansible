@@ -18,4 +18,14 @@
       msg: " courses learnt are: {{ courses | split (',') }}" #split will convert the string to list based on a seperator in our case the seperator is ","
 
 #--------------------------
-#- name:   
+- name: functions
+  hosts: local
+  connection: local
+  vars:
+    tags: #map or dictionary
+      application: payment
+      Environment: Dev
+  tasks:
+  - name: converting mao or dictionary into a list or items
+    ansible.builtin.debug:
+      msg: "tags are: {{ tags | dict2items }}"
