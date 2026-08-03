@@ -1,8 +1,8 @@
 #in ansible we generally use filters/functions to execute our task -- when we dont have an ready made functions instead of creating an function in ansible (should be created in python because ansible is written in python code) we generally use command or shell
 
 #command vs shell module
-#command --> if we are executing a simple command --> a simple command which dosen't need access to shell environment like varibles, piping, redirection, bash, etc..,
-#shell --> 
+#command --> if we are executing a simple command --> a simple command which dosen't need access to shell environment like varibles, piping, redirection, bash, etc.., --> command which can be executed outside a shell
+#shell --> if we are executing a complex command --> need access to shell environment like varibles, piping, redirection, bash, etc.., (to execute all these complex commands we need to go inside the shell otherwise we cannot execute these commands)
 
 - name: command vs shell
   hosts: local
@@ -29,4 +29,15 @@
     - name: print the output
       ansible.builtin.debug:
         msg: "{{ redirect_output }}"
-
+#----------------------
+- name: command vs shell
+  hosts: local
+  connection: local
+  tasks:
+    - name: redirect the output of a command
+      #ansible.builtin.command: ls -ltr >> /tmp/output.txt --> throws an error
+      ansible.builtin.shell: ls -ltr #--> this command will be executed because no redirection, not refering the any variable which is present inside the shell, no piping
+      register: redirect_output
+    - name: print the output
+      ansible.builtin.debug:
+        msg: "{{ redirect_output }}"
