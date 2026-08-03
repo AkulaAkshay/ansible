@@ -19,15 +19,15 @@
   hosts: local
   connection: local
   tasks:
-  - name: check whether user exixts or not
-    ansible.builtin.command: id roboshop
-    register: user_output
-    ignore_errors: ture
-    
-  - name: print the output
-    ansible.builtin.debug:
+   - name: check whether user exixts or not
+     ansible.builtin.command: id roboshop
+     register: user_output
+     ignore_errors: ture
+
+   - name: print the output
+     ansible.builtin.debug:
       msg: "{{ user_output }}"
 
-  - name: create user
-    ansible.builtin.command:
-    when: user_output.rc != 0
+   - name: create user
+     ansible.builtin.command:
+     when: user_output.rc != 0
