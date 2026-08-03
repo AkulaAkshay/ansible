@@ -72,7 +72,7 @@
   tasks:
   - name: convert to lower case
     ansible.builtin.debug:
-      msg: "convert into lower case{{ name | lower }}"
+      msg: "convert into lower case: {{ name | lower }}"
 #---------------------------
 - name: functions
   hosts: local
@@ -82,5 +82,5 @@
   tasks:
   - name: convert to lower case
     ansible.builtin.debug:
-      msg: "convert into lower case{{ institute | upper }}"
+      msg: "convert into lower case: {{ institute | upper }}"
 #---------------------------
