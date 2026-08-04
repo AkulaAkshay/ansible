@@ -43,3 +43,4 @@
         msg: "{{ redirect_output }}"
 
 # type env in mobaxterm --> we will get no.of variables when we use command module we can't access these variables but when we use shell module we will be  able to access all these env variables.
+#shell -> can go inside the house; command -> allowed only till gate
